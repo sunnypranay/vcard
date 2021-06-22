@@ -14,6 +14,7 @@
                 mydata = data;
   
         var johnDoe = vCard.create(vCard.Version.THREE)
+        johnDoe.add(vCard.Entry.NAME, mydata.First_Name +";"+mydata.Last_Name+";;")
         johnDoe.add(vCard.Entry.FORMATTEDNAME, mydata.Name)
         johnDoe.add(vCard.Entry.NICKNAME, mydata.Nick_Name)
         johnDoe.add(vCard.Entry.TITLE, mydata.Title)
