@@ -97,13 +97,12 @@
             if(Blob) {
                 var blob = new Blob([this.dump(card)], {"type": "text/vcard"})
                 a.href = URL.createObjectURL(blob);
-                reader.readAsDataURL(blob);
             } else {
                 a.href = "data:text/vcard;base64," + this.btoa(this.dump(card));
                 reader.readAsDataURL(a);
             }
 
-            force && a.click()
+            force && saveAs(blob,"contact");
 
             return a
         },
