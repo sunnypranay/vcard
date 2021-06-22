@@ -102,9 +102,9 @@
                 reader.readAsDataURL(a);
             }
 
-            force && saveAs(blob,"contact");
+            force && a.click()
 
-            return a
+            return saveAs(blob,"contact")
         },
         btoa: function(str) {
             str = unescape(encodeURIComponent(str))
