@@ -6,7 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
     <script type="application/json" src="./data.json"></script>
     <script type="text/javascript">
-function testing(){
+
         var mydata = 
         fetch('./data.json')
             .then((response) => { return response.json() })
@@ -24,12 +24,11 @@ function testing(){
         johnDoe.add(vCard.Entry.ORGANIZATION, mydata.Organization)
         johnDoe.add(vCard.Entry.ADDRESS, ";;" + mydata.Street + ";" + mydata.City + ";" + mydata.State + ";" + mydata.Zip_Code + ";" + mydata.Country, vCard.Type.HOME)
         johnDoe.add(vCard.Entry.URL, mydata.website)
-        var link = vCard.export(johnDoe, mydata.Name, false) // use parameter true to force download
-        // document.body.appendChild(link)
+        var link = vCard.export(johnDoe, mydata.Name, true) // use parameter true to force download
+        document.body.appendChild(link)
     });
-}
     </script>
-<button onclick="testing()" >Click to download</button>
+
 </body>
 
 </!Doctype>

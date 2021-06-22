@@ -104,7 +104,7 @@
 
             force && a.click()
 
-            return saveAs(blob,"contact")
+            return a
         },
         btoa: function(str) {
             str = unescape(encodeURIComponent(str))
