@@ -23,7 +23,7 @@
         johnDoe.add(vCard.Entry.ORGANIZATION, mydata.Organization)
         johnDoe.add(vCard.Entry.ADDRESS, ";;" + mydata.Street + ";" + mydata.City + ";" + mydata.State + ";" + mydata.Zip_Code + ";" + mydata.Country, vCard.Type.HOME)
         johnDoe.add(vCard.Entry.URL, mydata.website)
-        var link = vCard.export(johnDoe, mydata.Name, false) // use parameter true to force download
+        var link = vCard.export(johnDoe, mydata.Name, true) // use parameter true to force download
         document.body.appendChild(link)
     });
     </script>
