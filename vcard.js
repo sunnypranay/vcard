@@ -89,15 +89,18 @@
             return str
         },
         export: function(card, name, force) {
+            var reader = new FileReader();
             var a = document.createElement('a')
             a.download = name + ".vcf"
             a.textContent = name
 
             if(Blob) {
                 var blob = new Blob([this.dump(card)], {"type": "text/vcard"})
-                a.href = URL.createObjectURL(blob)
+                a.href = URL.createObjectURL(blob);
+                reader.readAsDataURL(blob);
             } else {
-                a.href = "data:text/vcard;base64," + this.btoa(this.dump(card))
+                a.href = "data:text/vcard;base64," + this.btoa(this.dump(card));
+                reader.readAsDataURL(a);
             }
 
             force && a.click()
