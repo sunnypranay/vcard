@@ -1,3 +1,4 @@
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 # 📇 Generation of VCF Card Using JavaScript 🖥
 
 The VCF, or vCard, is a "Virtual Contact File," a standard format used for storing and sharing personal contact information such as names, addresses, phone numbers, and more. Consider it as a digital business card. This project enables the generation of these vCards, streamlining the process of sharing contact information.
